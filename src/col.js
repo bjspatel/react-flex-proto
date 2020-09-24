@@ -1,15 +1,17 @@
 import React from 'react';
+import PropTypes from 'prop-types'
+import createReactClass from 'create-react-class';
 
-export const Col = React.createClass({
+export const Col = createReactClass({
   propTypes : {
-    grow : React.PropTypes.bool.isRequired,
-    shrink : React.PropTypes.bool.isRequired,
-    basis : React.PropTypes.string.isRequired,
-    padding : React.PropTypes.oneOfType([
-      React.PropTypes.string,
-      React.PropTypes.number,
+    grow : PropTypes.bool.isRequired,
+    shrink : PropTypes.bool.isRequired,
+    basis : PropTypes.string.isRequired,
+    padding : PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number,
     ]).isRequired,
-    align : React.PropTypes.string.isRequired,
+    align : PropTypes.string.isRequired,
   },
 
   getDefaultProps() {
